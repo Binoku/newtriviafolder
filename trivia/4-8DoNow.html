@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>League of Legends Trivia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animation-demo.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1>League of Legends Trivia</h1>
+          <div id="welcome-screen">
+            <!-- Type in rules here -->
+            <h3>What is your name?</h3>
+            <form>
+              <div class="input-field col s6">
+                <input id="player-name" type="text" placeholder="Type your name here">
+                <label class="active" for="first_name2">First Name</label>
+                <button type="submit" id="name-button" class="waves-effect waves-light btn red">Submit</button>
+              </div>
+            </form>
+          </div> <!-- end welcome-screen -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div id="dashboard ">
+            <h3 id="show-player-name">Player Name</h3>
+          </div>
+        </div>
+      </div> <!-- Scoreboard -->
+    </div>
+    <div id="question1" class="question" class"row">
+      <div class="col s12">
+        <h4>1. What is this game based on?</h4>
+        <form>
+          <div class"input-field col s6">
+            <input id="input-question1" type="text" placeholder="Your Answer">
+            <label class="active" for="input-question1">
+            Question 1</label>
+            <button type="submit" id="question1-btn" class="waves-effect waves-light btn red">Answer</button>
+          </div>
+        </form>
+        <div id="answer1" class="answer">
+        <h5>Your answer is: <span id="show-player-answer1"></span></h5>
+        <h5> The right answer is: <span id"correct-answer1"></span></h5>
+        <img src="http://uxrepo.com/static/icon-sets/linecons/svg/thumbs-up.svg">
+        <img src="http://www.clipartbest.com/cliparts/niB/Bq8/niBBq8A9T.png">
+       </div>
+      </div>
+     </div>
+    </div> 
+   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
