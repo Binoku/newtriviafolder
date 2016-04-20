@@ -48,13 +48,38 @@
         <div id="answer1" class="answer">
         <h5>Your answer is: <span id="show-player-answer1"></span></h5>
         <h5> The right answer is: <span id"correct-answer1"></span></h5>
-        <img src="http://uxrepo.com/static/icon-sets/linecons/svg/thumbs-up.svg">
-        <img src="http://www.clipartbest.com/cliparts/niB/Bq8/niBBq8A9T.png">
        </div>
       </div>
      </div>
     </div> 
    </main>
+     <!-- Question 2 -->
+      <div id="question2" class="question row">
+        <div class="col s12">
+          <h4>2. Who won the World Championship of 2015?</h4>
+          <form>
+            <div class="input-field col s6">
+              <input id="input-question2" type="text" placeholder="Type your answer here">
+              <label class="active" for="input-question2">Question 2</label>
+              <button type="submit" id="question2-btn" class="waves-effect waves-light btn green">Answer</button>
+            </div>
+          </form><!-- End of question 2 -->
+
+     <div id="answer2" class="answer">
+            <h5 id="correct-msg2" class="green-text correct-msg">You are correct!</h5>
+            <h5 id="incorrect-msg2" class="red-text incorrect-msg">WRONG!!!!!</h5>
+          </div>
+        </div> <!-- end col -->
+      </div> <!-- question 2 row -->
+
+      <!-- Win and Lose Msgs -->
+      <div class="row">
+        <div class="col s12">
+          <h3 id="lose-game-msg" class="red-text">You lost the game!</h3>
+          <!-- put win msg here -->
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>

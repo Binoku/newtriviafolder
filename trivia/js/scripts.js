@@ -4,22 +4,25 @@ $(document).ready(function() {
  
    var playerName = '';
    var playerAnswer1 = '';
-   var answer1 = 'Teamwork';
+   var answer1 = 'teamwork';
+   var answer2 = 'skt';
    var correctCounter = 0;
-
+   var triesLeft = 3
  
    // Hide Player Name
    $('#show-player-name').hide();
    $('.question').hide();
    $('.correct-msg').hide();
    $('.incorrect-msg').hide();
+   $('#lose-game-msg').hide();
+
    // Allow user to type name immediately on page load
    $('#player-name').focus();
  
      // When user submits name, welcome screen disappears
   function removeWelcomeScreen() {
     $('#welcome-screen').detach();
-    $('#show-player-name').show().addClass('animated fadeIn');
+    $('#question1').show().addClass('animated fadeIn').focus();
   };
 
   // Store player name
@@ -35,7 +38,7 @@ $(document).ready(function() {
   // Store answer 1
   $('#question1-btn').on('click', function(e) {
     e.preventDefault(); //prevents form from submitting to a data base
-    playerAnswer1 = $('#input-question1').val().trim();
+    playerAnswer1 = $('#input-question1').val().trim().toLowerCase();
     console.log(playerAnswer1);
     showPlayerAnswer1();
   });
@@ -56,16 +59,19 @@ $(document).ready(function() {
   }
   else {
     console.log("Player's answer is incorrect!");
-  }
+  };
     $('#playerAnswer1').addClass('animated fadeOut');
     $('#incorrect-msg1').show().addClass('animated fadeIn');
-  }
-    // setTimeout(removeplayerAnswer1, 1000);
+  };
+
+    function fadeOutAnswerCheckMsg() {
+    $('#incorrect-msg1').removeClass('fadeIn').addClass('fadeOut');
+  };
+  // Fading out Question 1
+   function fadeOutQuestion1() {
+    $('#question1').addClass('animated fadeOut');
+    setTimeout($('#question1').detach(), 2500);
+    $('#question2').show().addClass('animated fadeIn');
   };
 
 });
-    // Display's the right answer
-
-
- 
- // ready function ends
